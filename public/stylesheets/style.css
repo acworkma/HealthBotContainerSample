@@ -12,7 +12,7 @@ html, body {
 #botContainer {
   float: right;
   height: 99%;
-  width: 460px;
+  width: 80px;
   position: relative;
   display: none;
   border-width: 2px;
