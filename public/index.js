@@ -89,6 +89,9 @@ function initBotConversation() {
         name: "TriggerScenario"
     }).subscribe(function(id) {});
 
+    //remove the text input box
+    var shellInput = document.querySelector(".wc-console.has-upload-button");
+    shellInput.parentNode.removeChild(shellInput);
 
     botConnection.activity$
         .filter(function (activity) {return activity.type === "event" && activity.name === "shareLocation"})
