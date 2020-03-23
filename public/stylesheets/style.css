@@ -12,7 +12,7 @@ html, body {
 #botContainer {
   float: right;
   height: 99%;
-  width: 80px;
+  width: 460px;
   position: relative;
   display: none;
   border-width: 2px;
@@ -32,9 +32,3 @@ html, body {
 .ac-input div input[type="checkbox"]:checked + div{
   color: #0177ca!important
 }
-
-/* code to had the text input box
-div.wc-console.has-upload-button {
-  display: none !important;
-}
-*/

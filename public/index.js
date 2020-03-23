@@ -67,7 +67,7 @@ function initBotConversation() {
     }
     const botConnection = new BotChat.DirectLine({
         token: tokenPayload.connectorToken,
-        domain,
+        domain: domain,
         webSocket: true
     });
     startChat(user, botConnection);
@@ -88,10 +88,6 @@ function initBotConversation() {
         from: user,
         name: "TriggerScenario"
     }).subscribe(function(id) {});
-
-    //remove the text input box
-    var shellInput = document.querySelector(".wc-console.has-upload-button");
-    shellInput.parentNode.removeChild(shellInput);
 
     botConnection.activity$
         .filter(function (activity) {return activity.type === "event" && activity.name === "shareLocation"})
