@@ -40,3 +40,12 @@ div.wc-console.has-upload-button {
 
 /*supress the timestamp and bot name */
 .wc-message-from-bot span {   display:none; }
+
+/* add in the robot */
+.wc-message-from-bot {
+  background-image: url(https://hlbdemo.blob.core.windows.net/hlbdemocon/pinkrobot_small.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-top: 40px;
+  /*    margin-bottom:50px;*/
+}
