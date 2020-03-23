@@ -37,3 +37,6 @@ html, body {
 div.wc-console.has-upload-button {
   display: none !important;
 } 
+
+/*supress the timestamp and bot name */
+.wc-message-from-bot span {   display:none; }
