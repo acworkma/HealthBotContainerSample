@@ -83,7 +83,7 @@ function initBotConversation() {
     botConnection.postActivity({
         type: "invoke",
         value: {
-            trigger: "covid19_20200316"
+            trigger: "covid19_triage_20200331"
         },
         from: user,
         name: "TriggerScenario"
