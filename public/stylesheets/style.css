@@ -33,7 +33,7 @@ html, body {
   color: #0177ca!important
 }
 
-/* code to had the text input box*/ 
+/* code to hide the text input box*/ 
 div.wc-console.has-upload-button {
   display: none !important;
 } 
