@@ -41,7 +41,7 @@ div.wc-console.has-upload-button {
 /*supress the timestamp and bot name */
 .wc-message-from-bot span { display:none; }
 .wc-message-from.wc-message-from-me span { display:none; }
-/* .wc-message-from-me span {   display:none; } */
+.wc-message-from-me span {   display:none; }
 
 /* add in the robot */
 .wc-message-from-bot {
