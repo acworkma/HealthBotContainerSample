@@ -42,12 +42,12 @@ div.wc-console.has-upload-button {
 .wc-message-from-bot span { display:none; }
 
 /*supress the you messages 
-.wc-message-from.wc-message-from-me span { display:none; }
 
+.wc-message-from-me span { display:none; }
 .wc-message.wc-message-from-me { display:none; }
 */
 /* supress the blue box stamp - right side */
-.wc-message-from-me span { display:none; }
+.wc-message-from.wc-message-from-me span { display:none; }
 .wc-message-from.wc-message-from-me.wc-message-content { display:none; }
 
 /* add in the robot */
