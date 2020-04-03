@@ -38,14 +38,16 @@ div.wc-console.has-upload-button {
   display: none !important;
 } 
 
-/*supress the timestamp and bot name */
+/*supress the timestamp and bot name - left side*/
 .wc-message-from-bot span { display:none; }
 
 /*supress the you messages 
 .wc-message-from.wc-message-from-me span { display:none; }
 .wc-message-from-me span { display:none; }
-.wc-message-from.wc-message-from-me.wc-message-content { display:none; }*/
+*/
+/* supress the blue box stamp - right side */
 .wc-message.wc-message-from-me { display:none; }
+.wc-message-from.wc-message-from-me.wc-message-content { display:none; }
 
 /* add in the robot */
 .wc-message-from-bot {
