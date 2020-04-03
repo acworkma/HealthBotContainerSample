@@ -1,57 +1,33 @@
 html, body {
   height: 100%;
+}
+body {
   margin: 0;
 }
 
-.content {
-  float: left;
+#webchat {
   height: 100%;
-  padding-left: 10px;
+  width: 100%;
 }
 
-#botContainer {
-  float: right;
-  height: 99%;
-  width: 460px;
-  position: relative;
-  display: none;
-  border-width: 2px;
-  border-style: inset;
-}
-
-#botContainer.wc-display {
+#webchat[watermark="true"] [role="complementary"] ul[role="list"]::after {
+  content: "Powered By ...";
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, .63), #F8F8F8 40%);
+  bottom: 0;
+  right: 0;
+  color: #707070;
   display: block;
+  font-family: 'Segoe Semibold', Calibri, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  padding: 15px 10px 10px;
+  position: absolute;
+  position: sticky;
+  text-align: right;
 }
 
-.ac-input div input[type="checkbox"] + div{
-  flex: auto !important;
-  white-space: unset!important;
-  margin: -5px 6px 10px 6px !important;
-}
-
-.ac-input div input[type="checkbox"]:checked + div{
-  color: #0177ca!important
-}
-
-/* code to hide the text input box*/ 
-div.wc-console.has-upload-button {
-  display: none !important;
-} 
-
-/*supress the timestamp and bot name - left side*/
-.wc-message-from-bot span { display:none; }
-
-/* supress the blue box stamp - right side */
-.wc-message-from-me span { display:none; }
-.wc-message.wc-message-from-me { display:none; }
-.wc-message-from.wc-message-from-me span { display:none; }
-.wc-message-from.wc-message-from-me.wc-message-content { display:none; }
-
-/* add in the robot */
-.wc-message-from-bot {
-  background-image: url(https://hlbdemo.blob.core.windows.net/hlbdemocon/pinkrobot_small.png);
-  background-repeat: no-repeat;
-  background-position: left top;
-  padding-top: 40px;
-  /*    margin-bottom:50px;*/
+#webchat[watermark="true"] .webchat__scrollToEndButton {
+  bottom: 32px;
+  left: 50%;
+  right: unset;
+  transform: translate(-50%, 0);
 }
