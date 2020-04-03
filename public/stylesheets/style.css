@@ -40,8 +40,11 @@ div.wc-console.has-upload-button {
 
 /*supress the timestamp and bot name */
 .wc-message-from-bot span { display:none; }
+
+/*supress the you messages */
 .wc-message-from.wc-message-from-me span { display:none; }
-.wc-message-from-me span {   display:none; }
+.wc-message-from-me span { display:none; }
+.wc-message-from.wc-message-from-me.wc-message-content { display:none; }
 
 /* add in the robot */
 .wc-message-from-bot {
