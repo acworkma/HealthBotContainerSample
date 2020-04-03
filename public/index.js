@@ -90,7 +90,6 @@ function initBotConversation() {
         //botAvatarInitials: 'Bot',
         //userAvatarInitials: 'You',
         backgroundColor: '#F8F8F8',
-        wc-message-from-bot: 'display: none'
     };
 
     const store = window.WebChat.createStore({}, function(store) { return function(next) { return function(action) {
