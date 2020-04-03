@@ -31,8 +31,3 @@ body {
   right: unset;
   transform: translate(-50%, 0);
 }
-
-/* code to hide the text input box*/ 
-div.wc-console.has-upload-button {
-  display: none !important;
-} 
