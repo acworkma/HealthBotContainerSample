@@ -90,7 +90,8 @@ function initBotConversation() {
         //botAvatarInitials: 'Bot',
         //userAvatarInitials: 'You',
         backgroundColor: '#F8F8F8',
-        timestampColor: '#F8F8F8'
+        timestampColor: '#F8F8F8', // hide timestamp by setting same as background
+        bubbleFromUserBorderWidth: 5 //testing 
     };
 
     const store = window.WebChat.createStore({}, function(store) { return function(next) { return function(action) {
