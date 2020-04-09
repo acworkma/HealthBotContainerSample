@@ -143,7 +143,7 @@ function initBotConversation() {
     };
     startChat(user, webchatOptions);
 }
-// random comment delete
+
 function startChat(user, webchatOptions) {
     const botContainer = document.getElementById('webchat');
     window.WebChat.renderWebChat(webchatOptions, botContainer);
