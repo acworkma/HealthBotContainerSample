@@ -1,12 +1,10 @@
 const defaultLocale = 'en-US';
-const localeRegExPattern = /^[a-z]{2}(-[A-Z]{2})?$/;
 
 function requestChatBot(loc) {
     const params = new URLSearchParams(location.search);
-    const locale = params.has('locale') ? extractLocale(params.get('locale')) : defaultLocale;
     const oReq = new XMLHttpRequest();
     oReq.addEventListener("load", initBotConversation);
-    var path = "/chatBot?locale=" + locale;
+    var path = "/chatBot?locale=" + extractLocale(params.get('locale'));
 
     if (loc) {
         path += "&lat=" + loc.lat + "&long=" + loc.long;
@@ -22,15 +20,15 @@ function requestChatBot(loc) {
 }
 
 function extractLocale(localeParam) {
-    if(localeParam === 'autodetect') {
+    if (!localeParam) {
+        return defaultLocale;
+    }
+    else if (localeParam === 'autodetect') {
         return navigator.language;
     }
-
-    //Before assigning, ensure it's a valid locale string (xx or xx-XX)
-    if(localeParam.search(localeRegExPattern) === 0) {
+    else {
         return localeParam;
     }
-    return defaultLocale;
 }
 
 function chatRequested() {
@@ -83,17 +81,13 @@ function initBotConversation() {
         domain: domain
     });
     const styleOptions = {
-        botAvatarImage: 'https://hlbdemo.blob.core.windows.net/hlbdemocon/pinkrobot_small.png',
+        botAvatarImage: 'https://docs.microsoft.com/en-us/azure/bot-service/v4sdk/media/logo_bot.svg?view=azure-bot-service-4.0',
         // botAvatarInitials: '',
         // userAvatarImage: '',
-        hideSendBox: true , /* set to true to hide the send box from the view */
-        //botAvatarInitials: 'Bot',
-        //userAvatarInitials: 'You',
-        backgroundColor: '#F8F8F8',
-        timestampColor: '#F8F8F8', // hide timestamp by setting same as background
-        bubbleFromUserBackground: '#F8F8F8', // hide the from bubble
-        bubbleFromUserBorderColor: '#F8F8F8',
-        bubbleFromUserTextColor: '#F8F8F8'
+        hideSendBox: false, /* set to true to hide the send box from the view */
+        botAvatarInitials: 'Bot',
+        userAvatarInitials: 'You',
+        backgroundColor: '#F8F8F8'
     };
 
     const store = window.WebChat.createStore({}, function(store) { return function(next) { return function(action) {
@@ -111,9 +105,15 @@ function initBotConversation() {
                             jsonWebToken: jsonWebToken,
 
                             // Use the following activity to proactively invoke a bot scenario
+                            /*
                             triggeredScenario: {
-                                trigger: "covid19_triage"
+                                trigger: "{scenario_id}",
+                                args: {
+                                    myVar1: "{custom_arg_1}",
+                                    myVar2: "{custom_arg_2}"
+                                }
                             }
+                            */
                         }
                     }
                 }
