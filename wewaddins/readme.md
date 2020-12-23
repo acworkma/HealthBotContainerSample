@@ -1,7 +1,3 @@
-#Files
-
-
-
 #Scenario Commands
 
 | command                          | description                             |
